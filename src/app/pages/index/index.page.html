@@ -1,12 +1,19 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Demo-app Ionic v1</ion-title>
+    <ion-title color="primary">Demo-app Ionic v1</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
   <ion-button routerLink="/alert" size="small" color="tertiary">Alert page</ion-button>
-  <ion-button routerLink="/action-sheet" size="small" color="tertiary">Action Sheet page</ion-button>
+  <ion-button routerLink="/action-sheet" size="small" color="secondary">Action Sheet page</ion-button>
+
+  <ion-list> 
+      <ion-item *ngFor="let c of listComponents" routerLink="{{c.redirectTo}}">
+        <ion-icon slot="start" name="{{ c.icon }}" color="{{c.color}}"></ion-icon>
+        <ion-label>{{c.name}}</ion-label>
+      </ion-item>
+  </ion-list>
 
 </ion-content>

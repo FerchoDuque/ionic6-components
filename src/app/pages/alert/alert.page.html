@@ -1,5 +1,10 @@
-<app-header [titulo]="alert"></app-header>
+<app-header titulo="alert"></app-header>
 
 <ion-content>
-
+  <ion-button (click)="presentAlert()" size="small">Alert1</ion-button>
+  <ion-button (click)="presentAlert2()" size="small">Alert2</ion-button>
+  <p>{{ handlerMessage }}</p>
+  <p>{{ roleMessage }}</p>
+  <ion-button (click)="presentAlert3()" size="small">Alert3</ion-button>
+  <ion-button (click)="presentAlert4()" size="small">Alert4</ion-button>
 </ion-content>
