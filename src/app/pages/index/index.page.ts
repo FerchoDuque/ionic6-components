@@ -34,6 +34,12 @@ export class IndexPage implements OnInit {
       redirectTo: '/avatar',
       color: 'tertiary'
     },
+    {
+      icon: 'radio-button-off-outline',
+      name: 'Buttons',
+      redirectTo: '/buttons',
+      color: 'secondary'
+    },
   ];
 
   constructor() { }
