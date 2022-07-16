@@ -1,0 +1,50 @@
+<app-header titulo="datetime"></app-header>
+ 
+<ion-content>
+
+<ion-list>
+  <ion-list-header>
+    <ion-label>BirthDay Data</ion-label>
+  </ion-list-header>
+
+  <ion-item>
+    <ion-label>Birth</ion-label>
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime 
+        [showDefaultButtons]="true"
+        doneText="All set"
+        cancelText="Never mind"
+        display-format="DD MM YY"
+        [value]="birthDate.toISOString()"
+        (ionChange)="alterDate($event)"></ion-datetime>
+    </ion-item>
+  </ion-item>
+
+  <ion-list-header>
+    <ion-label>Restrictions</ion-label>
+  </ion-list-header>
+
+  <ion-item>
+    <ion-label>Birth</ion-label>
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime 
+        [showDefaultButtons]="true"
+        doneText="All set"
+        cancelText="Never mind"
+        display-format="DD MM YY"
+        [value]="birthDate.toISOString()"
+        (ionChange)="alterDate($event)"></ion-datetime>
+    </ion-item>
+  </ion-item>
+
+  <ion-item>
+    <ion-datetime
+        [showDefaultButtons]="true" 
+        (ionChange)="alterDate($event)"
+    ></ion-datetime>
+  </ion-item>
+</ion-list>
+
+</ion-content>

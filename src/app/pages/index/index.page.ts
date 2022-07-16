@@ -40,6 +40,42 @@ export class IndexPage implements OnInit {
       redirectTo: '/buttons',
       color: 'secondary'
     },
+    {
+      icon: 'card-outline',
+      name: 'Cards',
+      redirectTo: '/cards',
+      color: 'secondary'
+    },
+    {
+      icon: 'checkmark-circle-outline',
+      name: 'Checks',
+      redirectTo: '/check',
+      color: 'primary'
+    },
+    {
+      icon: 'hourglass-outline',
+      name: 'Date time',
+      redirectTo: '/datetime',
+      color: 'primary'
+    },
+    {
+      icon: 'bookmark-outline',
+      name: 'Fab',
+      redirectTo: '/fab',
+      color: 'secondary'
+    },
+    {
+      icon: 'grid-outline',
+      name: 'Grid',
+      redirectTo: '/grid',
+      color: 'tertiary'
+    },
+    {
+      icon: 'infinite-outline',
+      name: 'Infinite',
+      redirectTo: '/infinite',
+      color: 'tertiary'
+    },
   ];
 
   constructor() { }
