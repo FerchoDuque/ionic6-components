@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-button slot="start">
+      <ion-back-button 
+        defaultHref="/" 
+        color="light"
+        mode="ios"
+        size="small">
+      </ion-back-button>  
+
+    </ion-button>
+
+    <ion-title class="ion-text-capitalize" color="secondary">
+      {{ titulo }}
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="reorderEnable = !reorderEnable">
+        toogle
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+
+  <ion-reorder-group [disabled]="reorderEnable" (ionItemReorder)="doReorder($event)">
+    <ion-item *ngFor="let super of personajes">
+      <ion-label>{{ super }}</ion-label> 
+      <ion-reorder slot="end">
+        <ion-icon name="pizza"></ion-icon>
+      </ion-reorder>
+      </ion-item> 
+  </ion-reorder-group>
+
+</ion-content>

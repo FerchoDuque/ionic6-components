@@ -1,14 +1,22 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-buttons slot="start">
+        <ion-menu-button menu="first" color="primary"></ion-menu-button>
+      </ion-buttons>
+    </ion-buttons>
+
+    <!-- <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+
     <ion-title color="primary">Demo-app Ionic v1</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let c of listComponents" routerLink="{{c.redirectTo}}">
-      <ion-icon slot="start" name="{{ c.icon }}" color="{{c.color}}"></ion-icon>
-      <ion-label>{{c.name}}</ion-label>
-    </ion-item>
-  </ion-list>
+  
 </ion-content>
