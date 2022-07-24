@@ -88,5 +88,17 @@
     "name": "Modal",
     "redirectTo": "/modal",
     "color": "tertiary"
+  },
+  {
+    "icon": "tablet-portrait-outline",
+    "name": "popover",
+    "redirectTo": "/popover",
+    "color": "primary"
+  },
+  {
+    "icon": "code-working-outline",
+    "name": "progressbar",
+    "redirectTo": "/progressbar",
+    "color": "secondary"
   }
 ]

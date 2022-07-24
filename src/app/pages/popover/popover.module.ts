@@ -4,19 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { IndexPageRoutingModule } from './index-routing.module';
+import { PopoverPageRoutingModule } from './popover-routing.module';
 
-import { IndexPage } from './index.page';
-import { PipesModule } from 'src/app/pipes/pipes.module';
+import { PopoverPage } from './popover.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    IndexPageRoutingModule,
-    PipesModule
+    PopoverPageRoutingModule
   ],
-  declarations: [IndexPage]
+  declarations: [PopoverPage]
 })
-export class IndexPageModule {}
+export class PopoverPageModule {}

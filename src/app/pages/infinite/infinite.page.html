@@ -1,9 +1,18 @@
 <app-header titulo="infinite"></app-header>
 
-<ion-content>
+<ion-content> 
+
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="chevron-down-circle-outline"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
 
   <ion-list>
-    <ion-item *ngFor="let item of data; let i = index">
+    <ion-item *ngFor="let item of data; let i = index" class="animate_animated animate_fadein">
       <ion-label>Awesome Label {{i+1}}</ion-label>
     </ion-item>
   </ion-list>

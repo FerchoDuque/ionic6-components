@@ -15,9 +15,20 @@ export class IndexPage implements OnInit {
 
   listComponents: Observable<ListComponent[]>;
 
-  constructor() { }
+  albums: any[] = [];
+
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.getAlbums().subscribe(data => {
+      this.albums = data;
+      console.log(this.albums);
+      }
+    );
+  }
+
+  onSearchChange(event: any) {
+    console.log(event);
   }
 
 }

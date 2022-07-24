@@ -22,4 +22,9 @@ export class DataService {
     // eslint-disable-next-line max-len
     return this.http.get<ListComponent[]>('/assets/data/menu-opts.json');
   }
+
+  getAlbums() {
+    // eslint-disable-next-line max-len
+    return this.http.get<any>('https://jsonplaceholder.typicode.com/albums');
+  }
 }

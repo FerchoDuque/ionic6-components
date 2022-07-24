@@ -20,7 +20,7 @@ export class InfinitePage implements OnInit {
 
   loadData() {
     console.log(this.data);
-    if (this.data.length > 50) {
+    if (this.data.length > 250) {
       console.log('stop');
       this.infiniteScroll.complete();
       this.infiniteScroll.disabled = true;
@@ -29,7 +29,16 @@ export class InfinitePage implements OnInit {
       const nuevoArr = Array(20);
       this.data.push(...nuevoArr);
       this.infiniteScroll.complete();
-    }, 500);
+    }, 1500);
+  }
+
+  doRefresh(event) {
+    this.loadData();
+    setTimeout(() => {
+      const nuevoArr = Array(20);
+      this.data.push(...nuevoArr);
+      event.target.complete();
+    }, 1500);
   }
 
 }
